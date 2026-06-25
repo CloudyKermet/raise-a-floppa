@@ -49,7 +49,7 @@ end
       if workspace.Roommate then
       if workspace.Roommate.Head.Rent.Value == true then
       game:GetService("ReplicatedStorage").RequestRent:FireServer()
-               if workspace.Roommate.Head.CanRaise.Value == true then
+               task.wait(1)
       game:GetService("ReplicatedStorage").RequestRaise:FireServer()
                end
             end
