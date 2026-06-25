@@ -22,12 +22,11 @@ Discord = {
 RunService.RenderStepped:Connect(function(dt)
 if autocollect then
  for _, item in ipairs(workspace:GetChildren()) do
-           if item.name == "Money" then
-item.TouchInterest:firetouchinterest()
-            elseif
-               item.name == "Money Bag" then
-               item.TouchInterest:firetouchinterest()
-            end
+           if item.name == "Money" or item.name == "Money Bag" then
+        firetouchinterest(humanoidRootPart, item, 0)
+        wait(0.1)
+        firetouchinterest(humanoidRootPart, item, 1)
+end
 end
 end
 end)
