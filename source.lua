@@ -3,9 +3,6 @@ local plr = game.Players.LocalPlayer
 local RunService = game:GetService("RunService")
 local autocollect = false
 local autoclick = false
-local autorebirth = false
-local autoroll = false
-local antiafk = false
 
 local Window = Rayfield:CreateWindow({
    Name = "Roll an Anime v5",
@@ -24,7 +21,14 @@ Discord = {
 
 RunService.RenderStepped:Connect(function(dt)
 if autocollect then
- 
+ for _, item in ipairs(workspace:GetChildren()) do
+           if item.name == "Money" then
+item.TouchInterest:firetouchinterest()
+            elseif
+               item.name == "Money Bag" then
+               item.TouchInterest:firetouchinterest()
+            end
+end
 end
 end)
 
@@ -36,5 +40,14 @@ local tgl1 = Tab1:CreateToggle({
    Flag = "Toggle1",
    Callback = function(Value)
   autocollect = not autocollect
+   end,
+})
+
+local tgl2 = Tab1:CreateToggle({
+   Name = "Auto-Click",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+  autoclick = not autoclick
    end,
 })
