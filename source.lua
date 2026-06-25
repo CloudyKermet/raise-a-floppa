@@ -34,6 +34,9 @@ local moneybag = workspace:FindFirstChild("Money Bag")
          firetouchinterest(humanoidRootPart, moneybag, 0)
          end
 end
+      if autoclick then
+         workspace.Floppa.ClickDetector:FireServer()
+end
 end)
 
 local Tab1 = Window:CreateTab("Auto", 4483362458)
