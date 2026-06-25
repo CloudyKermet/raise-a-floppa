@@ -51,7 +51,6 @@ end
       game:GetService("ReplicatedStorage").RequestRent:FireServer()
                task.wait(1)
       game:GetService("ReplicatedStorage").RequestRaise:FireServer()
-               end
             end
          end
       end
