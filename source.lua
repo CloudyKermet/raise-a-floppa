@@ -46,13 +46,12 @@ end
 end
 
       if autorent then
-         print("ar")
       if workspace.Roommate then
-            print("rm")
-      if workspace.Roommate.Head.Rent.Value == true and workspace.Roommate.Head.CanRaise.Value == true then
-               print("yes!")
+      if workspace.Roommate.Head.Rent.Value == true then
       game:GetService("ReplicatedStorage").RequestRent:FireServer()
+               if workspace.Roommate.Head.CanRaise.Value == true then
       game:GetService("ReplicatedStorage").RequestRaise:FireServer()
+               end
             end
          end
       end
