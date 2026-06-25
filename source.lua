@@ -3,8 +3,6 @@ local player = game.Players.LocalPlayer
 local character = player.Character
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local RunService = game:GetService("RunService")
-local money = workspace:FindFirstChild("Money")
-local moneybag = workspace:FindFirstChild("Money Bag")
 local autocollect = false
 local autoclick = false
 
@@ -25,15 +23,15 @@ Discord = {
 
 RunService.RenderStepped:Connect(function(dt)
 if autocollect then
+local money = workspace:FindFirstChild("Money")
+local moneybag = workspace:FindFirstChild("Money Bag")
+         
          if money then
         firetouchinterest(humanoidRootPart, money, 0)
-        wait(0.1)
-        firetouchinterest(humanoidRootPart, money, 1)
          end
+         
          if moneybag then
          firetouchinterest(humanoidRootPart, moneybag, 0)
-        wait(0.1)
-        firetouchinterest(humanoidRootPart, moneybag, 1)
          end
 end
 end)
