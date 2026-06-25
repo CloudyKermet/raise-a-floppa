@@ -9,7 +9,7 @@ local autocollect = false
 local autoclick = false
 
 local Window = Rayfield:CreateWindow({
-   Name = "Roll an Anime v5",
+   Name = "raise a floopa",
    LoadingTitle = "By Kermet",
    LoadingSubtitle = "Loading...",
    ShowText = "Rayfield",
