@@ -25,13 +25,16 @@ Discord = {
 
 RunService.RenderStepped:Connect(function(dt)
 if autocollect then
+         if money then
         firetouchinterest(humanoidRootPart, money, 0)
         wait(0.1)
         firetouchinterest(humanoidRootPart, money, 1)
-
+         end
+         if moneybag then
          firetouchinterest(humanoidRootPart, moneybag, 0)
         wait(0.1)
         firetouchinterest(humanoidRootPart, moneybag, 1)
+         end
 end
 end)
 
