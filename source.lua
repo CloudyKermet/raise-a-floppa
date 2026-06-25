@@ -35,7 +35,7 @@ local moneybag = workspace:FindFirstChild("Money Bag")
          end
 end
       if autoclick then
-         workspace.Floppa.ClickDetector:FireServer()
+         fireclickdetector(workspace.Floppa.ClickDetector)
 end
 end)
 
